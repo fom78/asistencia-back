@@ -1,7 +1,7 @@
 # Como ejecutarlo
 - Clonar el repo 
 - abrir consola en tu PC
-- Ejecutar: git clone <Pegar lo clonado>
+- Ejecutar: git clone "Pegar lo clonado"
 - cd asistencia-back
 - npm install
 - Y por ultimo npm start 
