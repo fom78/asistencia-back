@@ -1,3 +1,14 @@
+# Como ejecutarlo
+- Clonar el repo 
+- abrir consola en tu PC
+- Ejecutar: git clone <Pegar lo clonado>
+- cd asistencia-back
+- npm install
+- Y por ultimo npm start 
+
+
+# Paso a paso para crearlo desde cero
+
 ## Servidor 
 
 - crear una carpeta llamado servidor para este caso
@@ -95,9 +106,8 @@ export default {
 ## Git
 
 - ejecutamos git init
-Si nos crea el repositorio con su rama master, vamos a hacer que sea main, ejecutamos
 
-git switch -C main
+
 
 - creamos el .gitignore 
 - Dentro lo siguiente
@@ -107,10 +117,15 @@ node_modules
 # environment variables
 .env
 
+- git add .
+- git commit -m "inicial"
+
 - Luego desde Github creamos un nuevo repositorio
 y copiamos y pegamos en la consola los comandos que estan bajo 
 …or push an existing repository from the command line
 Normalmente son 3.
+
+- En este punto ya tenemos nuestro repositorio en GitHub
 
 
 
