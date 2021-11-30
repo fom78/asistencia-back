@@ -1,5 +1,11 @@
 import config from './config'
-const express = require('express')
+import express from 'express'
+import mongoose from 'mongoose'
+
+mongoose
+  .connect(config.MONGO_URL)
+  .then((db) => console.log(`DB esta conectada: ${config.MONGO_URL}`))
+  .catch((err) => console.log(err))
 
 
 const app = express()
