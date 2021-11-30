@@ -110,11 +110,12 @@ export default {
 
 
 - creamos el .gitignore 
-- Dentro lo siguiente
-# Node
-node_modules
+- Dentro lo siguiente<br>
 
-# environment variables
+#Node<br>
+node_modules
+<br>
+#environment variables<br>
 .env
 
 - git add .
@@ -126,6 +127,9 @@ y copiamos y pegamos en la consola los comandos que estan bajo
 Normalmente son 3.
 
 - En este punto ya tenemos nuestro repositorio en GitHub
+
+
+
 
 
 
