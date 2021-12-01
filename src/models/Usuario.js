@@ -15,8 +15,9 @@ const usuarioSchema = new Schema(
       required: true
     },
     roles: {
-        type: [],
-        required: true
+      type: String,
+      enum : ['admin','student'],
+      required: true
     }
   },
   {
