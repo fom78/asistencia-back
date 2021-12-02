@@ -2,10 +2,11 @@
   "name": "servidor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "babel src/app.js -d dist",
-    "start": "babel-node src/app.js"
+    "serve": "babel-node src/app.js",
+    "start": "nodemon --exec npm run serve"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/node": "^7.16.0",
-    "@babel/preset-env": "^7.16.4"
+    "@babel/preset-env": "^7.16.4",
+    "nodemon": "^2.0.15"
   }
 }
