@@ -14,6 +14,7 @@
 - crear una carpeta llamado servidor para este caso
 - ejecutar desde consola dentro de la carpeta servidor: npm init -y
   Como resultado ya crea el package.json:
+  ```json
   {
   "name": "servidor",
   "version": "1.0.0",
@@ -26,6 +27,7 @@
   "author": "",
   "license": "ISC"
   }
+  ```
 
 ## instalamos las dependencias:
 
@@ -44,6 +46,7 @@
 
 - creamos un archivo app.js dentro de src
 - Dentro pegamos el siguiente codigo:
+```js
   const express = require('express')
   const app = express()
 
@@ -54,6 +57,7 @@ res.send('Hola en explorador')
 const server=app.listen(3000, () => {
 console.log('Servidor web escuchando por el puerto 3000...');
 });
+```
 
 - Corremos node ./src/app.js
 - Verificamos todo funciona, tenemos el servidor corriendo en el puerto 3000.
@@ -66,6 +70,7 @@ npm install -D @babel/cli @babel/core @babel/preset-env @babel/node
 
 - Ahora creamos el archivo .babelrc
 - Dentro pegamos el siguiente codigo:
+```json
   {
   "presets": [
   ["@babel/env", {
@@ -75,6 +80,7 @@ npm install -D @babel/cli @babel/core @babel/preset-env @babel/node
   }]
   ]
   }
+  ```
 
 ## Instalar Nodemon
 
@@ -83,30 +89,35 @@ npm install -D @babel/cli @babel/core @babel/preset-env @babel/node
 npm install --save-dev nodemon
 
 - Ahora para ejecutar el servidor con el cli de babel y nodemon, agregamos en el package.json los siguientes scripts:
-
+```json
   "scripts": {
   "build": "babel src/app.js -d dist",
   "serve": "babel-node src/app.js",
   "start": "nodemon --exec npm run serve"
   },
-
+```
 - Listo ahora corremos el comando npm start y todo funciona
 
 ## Las variables de entorno
 
 - creamos el archivo .env
   y dentro declaramos la siguiente variable:
+  ```
   PORT=4000
+  ```
 
 - Para trabajar con estas variables de manaera simple y ordenada crearemos el archivo config.js dentro de src
 
 - Dentro colocamos el siguiente codigo
+```js
   import { config } from 'dotenv'
   config()
 
-export default {
-PORT: process.env.PORT || 4000
-}
+  export default {
+  PORT: process.env.PORT || 4000
+  }
+```
+
 
 - Con esto ya tenemos un acceso mas simple a las variables de entorno, con solo importar el archivo config.js donde se lo necesite.
 
@@ -117,14 +128,14 @@ PORT: process.env.PORT || 4000
 - ejecutamos git init
 
 - creamos el .gitignore
-- Dentro lo siguiente<br>
-
-#Node<br>
+- Dentro lo siguiente
+```.gitignore
+#Node
 node_modules
-<br>
-#environment variables<br>
-.env
 
+#environment variables
+.env
+```
 - git add .
 - git commit -m "inicial"
 
