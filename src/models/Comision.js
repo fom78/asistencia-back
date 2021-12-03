@@ -16,7 +16,7 @@ const comisionSchema = new Schema(
     },
     fechaInicio: {
       type: Date,
-      required: true
+      required: true,
     },
     fechaFinal: {
       type: Date,

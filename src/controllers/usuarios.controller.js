@@ -1,6 +1,6 @@
 import { Usuario } from '../models/Usuario'
 
-export const createUsuario = async(req, res) => {
+export const createUsuario = async (req, res) => {
     try {
         const {
             nombre,
@@ -13,7 +13,7 @@ export const createUsuario = async(req, res) => {
         if (usuarioEncontrado) {
             return res.status(304).json({ msg: 'El DNI ya existe' })
         }
-        
+
         // Creamos el Nuevo Usuario para agregarlo
         const usuario = new Usuario({
             nombre,
@@ -30,10 +30,11 @@ export const createUsuario = async(req, res) => {
 }
 
 export const mostrarUsuarios = async (req, res) => {
+    
     try {
         const usuarios = await Usuario.find()
         return res.status(200).json(usuarios)
     } catch (error) {
         console.error(error)
-    } 
-  }
+    }
+}
