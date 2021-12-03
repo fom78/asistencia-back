@@ -27,3 +27,14 @@ export const createComision = async (req, res) => {
         res.send(error)
     }
 }
+
+export const mostrarComisiones = async (req, res) => {
+
+    try {
+        const comision = await Comision.find();
+
+        return res.json(comision);
+    } catch (e) {
+        res.json(e);
+    }
+}
