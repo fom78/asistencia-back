@@ -26,8 +26,8 @@ POST http://localhost:4000/comision
 Content-Type: application/json
 
 {
-    "numero": 2187,
-    "titulo": "Desarrollo Web Avanzado X1",
+    "numero": 2157,
+    "titulo": "Desarrollo Web",
     "profesor": [
       {
         "nombre": "Erica",
@@ -38,15 +38,14 @@ Content-Type: application/json
     ],
     "fechaInicio": "2022-03-01T00:00:00.000Z",
     "fechaFinal": "2022-10-30T03:00:00.000Z",
-    "calendario": [],
-    "inscriptos": []
+    "calendario": []
   }
 
 ###
-PUT http://localhost:4000/comision/agregarinscripto/61ad5da66ec75924a802f29b
+PUT http://localhost:4000/comision/agregarinscripto/61ad5faa2a3c929d01ad3ea9
 Content-Type: application/json
 
 {
-  "idUsuarioAInscribir":"61a6b212c20e390d36777f7e",
+  "idUsuarioAInscribir":"61a8de7c2eb646572482c480",
   "rol":"admin"
 }

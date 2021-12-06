@@ -9,11 +9,9 @@ export const createComision = async (req, res) => {
         if (comisionEncontrada) {
             return res.status(304).send({ msg: `La comision ${numero} ya existe` })
         } else {
-            console.log(inscriptos);
             const usuariosEncontrados = await Usuario.find({
                 _id: { $in: inscriptos }
             })
-            console.log(usuariosEncontrados);
 
             const comision = new Comision({
                 numero,
@@ -31,7 +29,6 @@ export const createComision = async (req, res) => {
             return res.send(comisionGuardada);
         }
     } catch(error) {
-        console.log("ERROR:",error);
         res.send(error)
     }
 }
@@ -65,7 +62,7 @@ export const agregarInscripto = async (req, res) => {
             $and: [{ inscriptos: { $in: [idUsuarioAInscribir] } }, { _id: id }]
         })
 
-        console.log("estaInscripto: ", estaInscripto)
+        // console.log("estaInscripto: ", estaInscripto)
 
         if (estaInscripto.length > 0) {
             return res.status(203).json({
