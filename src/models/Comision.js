@@ -8,7 +8,7 @@ const comisionSchema = new Schema(
     },
     titulo: { // Desarrollo Web
       type: String,
-      unique: true
+      // unique: true
     },
     profesor: { // Erica
       type: Array,
@@ -26,10 +26,12 @@ const comisionSchema = new Schema(
       type: Array,
       default: []
     },
-    inscriptos: {
-      type: Array,
-      default: []
-    }
+    inscriptos: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario'
+      }
+    ]
   },
   {
     timestamps: true,

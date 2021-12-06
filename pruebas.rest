@@ -11,8 +11,42 @@ POST http://localhost:4000/usuario
 Content-Type: application/json
 
 {
-    "nombre": "pepe47",
-    "dni": 233232183,
+    "nombre": "pepe48",
+    "dni": 23323218322,
     "clave": "123456",
     "roles": "student"
+}
+
+# Comisiones
+###
+GET http://localhost:4000/comision
+
+###
+POST http://localhost:4000/comision
+Content-Type: application/json
+
+{
+    "numero": 2187,
+    "titulo": "Desarrollo Web Avanzado X1",
+    "profesor": [
+      {
+        "nombre": "Erica",
+        "dni": "222222",
+        "clave": "1234abcd",
+        "roles": "admin"
+      }
+    ],
+    "fechaInicio": "2022-03-01T00:00:00.000Z",
+    "fechaFinal": "2022-10-30T03:00:00.000Z",
+    "calendario": [],
+    "inscriptos": []
+  }
+
+###
+PUT http://localhost:4000/comision/agregarinscripto/61ad5da66ec75924a802f29b
+Content-Type: application/json
+
+{
+  "idUsuarioAInscribir":"61a6b212c20e390d36777f7e",
+  "rol":"admin"
 }
