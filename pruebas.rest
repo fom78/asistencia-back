@@ -16,6 +16,15 @@ Content-Type: application/json
     "clave": "123456",
     "roles": "student"
 }
+###
+GET http://localhost:4000/usuario/23323218322
+
+##
+PUT http://localhost:4000/usuario/modificarusuario/23323218322
+
+##
+
+DELETE http://localhost:4000/usuario/eliminarusuario/23323218322
 
 # Comisiones
 ###
